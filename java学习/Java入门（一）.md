@@ -14,6 +14,8 @@
 > [idea配置教程](https://blog.csdn.net/ACE_U_005A/article/details/125552411)
 3. maven安装教程
 > [maven安装教程](https://blog.csdn.net/u012660464/article/details/114113349)
+4. IDEA实用插件
+- 生成标准javabean类  安装PTG插件
 ## 三、java中基础知识了解
 > [java入门教程](https://www.bilibili.com/video/BV17F411T7Ao/?spm_id_from=333.337.search-card.all.click&vd_source=ee23caf8ba13ec874dfa7f165dce3c31)
 1. jdk,jre,jvm三者之间的关系

@@ -158,3 +158,159 @@ public static 返回值类型 方法名（int number1,int number2）{
         System.out.println(result);
     }
 ```
+5. 键盘录入
+```java
+import java.util.Scanner;
+//nextInt()；接受整数
+//nextDouble();接受小数
+//next();接受字符串
+//遇到空格，制表符，回车就停止接受。
+
+//next Line();接受字符串。
+Scanner sc=new Scanner(System.in);
+int num= sc.nextInt();
+```
+## 五、面向对象
+1. 类和对象是什么
+  类是共同特征的描述（设计图），对象是真实存在的具体实例
+  ```java
+  public class 类名{
+    1.成员变量（属性）
+    2.成员方法（行为）
+  }
+  类名 对象名=new 类名（）
+  ```
+  封装： 对象代表什么，就得封装对应的数据，并提供数据对应的行为。
+2. 关键字
+- private:是一个权限修饰符；可以修饰成员变量和方法；被private修饰的成员只能在本类中才能访问。针对每一个私有化成员变量，都要提供一个get和set方法，来给成员赋值或者对外提供值。
+- this: 可以区别局部变量和成员变量
+3. 构造方法
+- 如果没有定义构造方法，系统会给出一个默认的无参构造方法。
+- 构造方法重载：带参构造方法和无参构造方法，两者方法名相同，参数不同。
+- 构造方法在创建对象的时候，由虚拟机自动调用，给成员变量进行初始化。
+
+4. 标准的javabean类
+- 构造方法、私有变量get、set生成的快捷方式： alt+INS或者alt +fn +ins
+- 插件PTG 利用他来生成标准的javabean
+```java
+public class HelloWorld {
+  private String username;
+  private String password;
+  private String email;
+  private String gender;
+  private int age;
+
+     //空参构造方法
+
+  public HelloWorld() {
+  }
+
+  //有参构造方法
+
+  public HelloWorld(String username, String password, String email, String gender, int age) {
+    this.username = username;
+    this.password = password;
+    this.email = email;
+    this.gender = gender;
+    this.age = age;
+  }
+  //每个私有变量生成 get和set 方法
+
+  public String getUsername() {
+    return username;
+  }
+
+  public void setUsername(String username) {
+    this.username = username;
+  }
+
+  public String getPassword() {
+    return password;
+  }
+
+  public void setPassword(String password) {
+    this.password = password;
+  }
+```
+5. 测试案例
+```java
+//文字版格斗游戏
+
+import java.util.Random;
+
+/**
+ * 角色描述
+ *
+ * @author 20757
+ */
+public class Role {
+private String name;
+private int blood;
+
+    public Role() {
+    }
+
+    public Role(String name, int blood) {
+        this.name = name;
+        this.blood = blood;
+    }
+    /**
+     * 获取
+     * @return name
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * 设置
+     * @param name
+     */
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    /**
+     * 获取
+     * @return blood
+     */
+    public int getBlood() {
+        return blood;
+    }
+
+    /**
+     * 设置
+     * @param blood
+     */
+    public void setBlood(int blood) {
+        this.blood = blood;
+    }
+
+ public void attack(Role role){
+        //产生随机伤害1-20
+     Random r= new Random();
+     int hpDamage =r.nextInt(20)+1;
+     role.setBlood(role.getBlood()-hpDamage);
+     if(role.getBlood()>0){
+     System.out.println(this.getName()+"挥舞拳头，打了"+role.getName()+"一下，造成了"+hpDamage+"的伤害，目前"+role.getName()+
+             "还剩下"+role.getBlood()+"的血量");
+     }else{
+         System.out.println(role.getName()+"被"+this.getName()+"KO了");
+     }
+ }
+}
+
+-----------------------------------
+public class TextFightingGame
+{
+    public static void main(String[] args) {
+     Role r1=new Role("乔峰",100);
+     Role r2=new Role("鸠摩智",100);
+     while(r1.getBlood()>0&&r2.getBlood()>0){
+         r1.attack(r2);
+         if(r2.getBlood()>0)
+         r2.attack(r1);
+     }
+    }
+}
+```
