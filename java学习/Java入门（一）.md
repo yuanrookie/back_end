@@ -72,3 +72,6 @@
 ```java
         System.out.println();
 ```
+7. API帮助文档
+链接: https://pan.baidu.com/s/1_Zlr731rtXiy5HGzwT56iA 提取码: ndpc 复制这段内容后打开百度网盘手机App，操作更方便哦
+当下载完毕之后，右击这个文件，点击属性，把解除锁定勾选上，即可正常使用。
