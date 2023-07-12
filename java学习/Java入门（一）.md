@@ -17,7 +17,7 @@
 4. IDEA实用插件
 - 生成标准javabean类  安装PTG插件
 ## 三、java中基础知识了解
-> [java入门教程](https://www.bilibili.com/video/BV17F411T7Ao/?spm_id_from=333.337.search-card.all.click&vd_source=ee23caf8ba13ec874dfa7f165dce3c31)
+> [java入门教程上](https://www.bilibili.com/video/BV17F411T7Ao/?spm_id_from=333.337.search-card.all.click&vd_source=ee23caf8ba13ec874dfa7f165dce3c31)
 1. jdk,jre,jvm三者之间的关系
  - JDK是java开发工具包，包括 JVM虚拟机（java 运行的地方），核心类库(Java已经写好的工具)，开发工具（如 javac,java,jdb,jhat）
  - JRE是Java运行环境,由JVM,核心类库，运行工具组成
